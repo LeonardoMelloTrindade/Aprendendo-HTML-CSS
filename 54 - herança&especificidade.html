@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Herança e especificidade</title>
+
+		<style type="text/css">
+			/*** HERANÇA ***/
+
+			/*** QUANTO MAIS ESPECIFICO FOR O SELETOR MAIS PRECEDÊNCIA ELE VAI TER PERANTE OS OUTROS ***/
+
+			/*
+			body {
+				color: red;
+			}
+
+			.pagina {
+				color: purple;
+			}
+			*/
+
+			* { /* QUARTO DA PRECEDENCIA
+				color: blue; /* O !important DÁ A PREFEREÊNCIA DE CONFIGURAÇÃO */
+			}
+
+			p { /* TERCEIRO NA PRECEDENCIA */
+				color: darkred;
+			}
+
+			p#amarelo { /* PRIMEIRO NA PRECEDENCIA*/
+				background: yellow;
+			}
+
+			p.verde { /* SEGUNDO NA PRECEDENCIA */
+				background: green;
+			}
+
+
+		</style>
+
+	</head>
+	<body>
+
+		<div class="pagina">
+
+			<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</h2>
+
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. adipisicing elit, sed do eiusmod.
+			</p>
+
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. adipisicing elit, sed do eiusmod.
+			</p>
+
+			<p id="amarelo" class="verde">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. adipisicing elit, sed do eiusmod.
+			</p>
+			
+
+
+		</div>
+
+	</body>
+</html>
